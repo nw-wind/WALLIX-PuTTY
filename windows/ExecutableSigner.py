@@ -26,6 +26,6 @@ print('ExecutableSigner');
 with open(sign_cert_passwd_file_name, 'r') as sign_cert_passwd_file:
     sign_cert_passwd = sign_cert_passwd_file.read().replace('\n', '')
     subprocess.call(                                                    \
-        ['C:\\Program Files (x86)\\Windows Kits\\8.1\\bin\\x86\\signtool.exe', 'sign', '/t',                                  \
+        ['signtool.exe', 'sign', '/t',                                  \
          'http://timestamp.digicert.com', '/f', sign_cert_file_name,    \
          '/fd', 'sha256', '/p', sign_cert_passwd, target_file_name])

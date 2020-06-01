@@ -48,6 +48,7 @@
     <CustomBuildBeforeTargets>BuildGenerateSources</CustomBuildBeforeTargets>
     <CustomBuildAfterTargets>
     </CustomBuildAfterTargets>
+    <ExecutablePath>C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python37_64;C:\Program Files (x86)\Windows Kits\8.1\bin\x86;$(ExecutablePath)</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>.\Debug\</OutDir>
@@ -100,6 +101,9 @@
       <GenerateDebugInformation>No</GenerateDebugInformation>
       <ProgramDatabaseFile />
     </Link>
+    <CustomBuildStep>
+      <Command>set</Command>
+    </CustomBuildStep>
     <CustomBuildStep>
       <Command>cd $(SolutionDir)..\..\ &amp; perl licence.pl</Command>
       <Outputs>$(SolutionDir)..\..\licence.h</Outputs>
